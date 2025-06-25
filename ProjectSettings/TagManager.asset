@@ -8,6 +8,7 @@ TagManager:
   - Obstaculo1
   - Obstaculo2
   - Enemy
+  - WindAttackArea
   layers:
   - Default
   - TransparentFX
