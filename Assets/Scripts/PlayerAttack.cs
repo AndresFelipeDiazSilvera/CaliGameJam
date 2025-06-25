@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -19,6 +20,8 @@ public class PlayerAttack : MonoBehaviour
     public WindSpawnConfig[] windSpawnConfigs;
 
     private Camera mainCamera;
+    private bool canAttack = true;
+    [SerializeField] private float attackCooldown = 1f;
 
     void Start()
     {
@@ -48,7 +51,11 @@ public class PlayerAttack : MonoBehaviour
 
     public void OnAttack(InputValue value)
     {
-        ActivateWindAttack();
+        if (canAttack)
+        {
+            ActivateWindAttack();
+            StartCoroutine(Cooldown());
+        }
     }
 
     void ActivateWindAttack()
@@ -113,5 +120,12 @@ public class PlayerAttack : MonoBehaviour
         }
 
         Destroy(currentWindAttack, 0.5f);
+    }
+
+    IEnumerator Cooldown()
+    {
+        canAttack = false;
+        yield return new WaitForSeconds(attackCooldown);
+        canAttack = true; 
     }
 }
