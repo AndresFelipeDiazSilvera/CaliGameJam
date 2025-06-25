@@ -6,17 +6,15 @@ public class PlayerController : MonoBehaviour
     [SerializeField] float speed;
     [SerializeField] float windForce;
     [SerializeField] PlayerInput playerInput;
-    [SerializeField] float impulseDuration = 0.5f;
+    [SerializeField] float impulseDuration ;
     public Vector2 inputs;
     public bool isBeingImpulsed = false;
     private float currentImpulseTime = 0f;
     private Rigidbody2D rB2D;
-    private Obstacules obstacules;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         rB2D = GetComponent<Rigidbody2D>();
-        obstacules = FindFirstObjectByType<Obstacules>();
     }
 
     // Update is called once per frame

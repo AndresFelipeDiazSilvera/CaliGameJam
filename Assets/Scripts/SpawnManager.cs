@@ -6,6 +6,7 @@ public class SpawnManager : MonoBehaviour
 {
     [SerializeField] GameObject enemy;
     [SerializeField] GameObject enemy2;
+    [SerializeField] GameObject player;
     [SerializeField] List<GameObject> enemies = new List<GameObject>();
     [SerializeField] int rangeSpawnMax=10;
     [SerializeField] int rangeSpawnMin=-10;
@@ -60,6 +61,7 @@ public class SpawnManager : MonoBehaviour
             if (!Enemy.activeInHierarchy)
             {
                 Enemy.transform.position = SpawnPoint();
+                Enemy.GetComponent<EnemyAi>().SetTarget(player);
                 Enemy.SetActive(true);
                 return Enemy;
             }

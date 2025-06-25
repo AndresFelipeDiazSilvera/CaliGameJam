@@ -21,7 +21,7 @@ public class PlayerAttack : MonoBehaviour
 
     private Camera mainCamera;
     private bool canAttack = true;
-    [SerializeField] private float attackCooldown = 1f;
+    [SerializeField] private float attackCooldown;
 
     void Start()
     {
