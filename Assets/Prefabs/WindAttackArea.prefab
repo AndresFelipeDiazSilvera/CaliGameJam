@@ -102,6 +102,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c0cc9188cc5cc04d8281fa68b6e5caf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  windForce: 10
+  attackSpeed: 5
+  windDirection: {x: 1, y: 0}
 --- !u!61 &-8074031562941465852
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -163,7 +166,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDamping: 0
   m_AngularDamping: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2

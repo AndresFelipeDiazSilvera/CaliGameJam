@@ -93,8 +93,11 @@ public class PlayerAttack : MonoBehaviour
         // Rotacion del objeto usamos el angulo fijo definido en la configuracion
         Quaternion windRotation = Quaternion.Euler(0f, 0f, bestConfig.fixedRotationAngleZ);
 
-        // Instancia el prefab con la posicion del punto de spawn mas cercano y la rotacion fija
+        // Instancia el prefab en la posición del spawn point.
         GameObject currentWindAttack = Instantiate(windAttackPrefab, bestConfig.spawnPoint.position, windRotation);
+
+        //se le agrega como hijo
+        currentWindAttack.transform.SetParent(this.transform);
 
         // obtenemos el script AttackSystem del objeto de viento instanciado
         AttackSystem windScript = currentWindAttack.GetComponent<AttackSystem>();

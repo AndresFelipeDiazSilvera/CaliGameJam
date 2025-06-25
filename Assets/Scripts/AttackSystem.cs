@@ -2,14 +2,13 @@ using UnityEngine;
 
 public class AttackSystem : MonoBehaviour
 {
-    [SerializeField] float windForce = 10f; 
+    [SerializeField] float windForce = 10f;
     [SerializeField] public Vector2 windDirection = Vector2.right;
     private Vector2 awayFromAttack;
-
     // metodo para la colicion del ataque
     void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log("viento choco con"+other.gameObject.tag);
+        Debug.Log("viento choco con" + other.gameObject.tag);
         // Verificamos si el objeto que entro en el trigger es un Player o un Enemy
         if (other.CompareTag("Player") || other.CompareTag("Enemy"))
         {
