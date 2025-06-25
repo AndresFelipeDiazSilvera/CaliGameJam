@@ -13,7 +13,6 @@ public class PlayerBird : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         // Iniciar sin gravedad hasta el primer salto
-        rb.isKinematic = true;
     }
     
     void Update()
@@ -40,7 +39,6 @@ public class PlayerBird : MonoBehaviour
     void StartGame()
     {
         gameStarted = true;
-        rb.isKinematic = false;
         rb.gravityScale = 2f;
     }
     
@@ -84,7 +82,7 @@ public class PlayerBird : MonoBehaviour
     void CollectItem(GameObject item)
     {
         // Buscar GameManagerBird
-        GameManagerBird gameManager = FindObjectOfType<GameManagerBird>();
+        GameManagerBird gameManager = FindAnyObjectByType<GameManagerBird>();
         if (gameManager != null)
         {
             gameManager.AddScore(10);
@@ -100,7 +98,7 @@ public class PlayerBird : MonoBehaviour
         rb.linearVelocity = Vector2.zero;
         
         // Notificar al GameManagerBird
-        GameManagerBird gameManager = FindObjectOfType<GameManagerBird>();
+        GameManagerBird gameManager = FindAnyObjectByType<GameManagerBird>();
         if (gameManager != null)
         {
             gameManager.GameOver();
