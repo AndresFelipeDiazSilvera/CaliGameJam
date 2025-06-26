@@ -9,6 +9,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] float impulseDuration ;
     public Vector2 inputs;
     public bool isBeingImpulsed = false;
+    public bool isFalling = false;
     private float currentImpulseTime = 0f;
     private Rigidbody2D rB2D;
     // Start is called once before the first execution of Update after the MonoBehaviour is created

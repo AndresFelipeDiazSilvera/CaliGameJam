@@ -7,6 +7,7 @@ public class EnemyAi : MonoBehaviour
     [SerializeField] float impulseDuration; 
     [SerializeField] private EnemyAttack enemyAttack;
     public bool isBeingImpulsed = false; // Estado para cuando el enemigo es empujado por una fuerza externa
+    public bool isFalling = false; //estado para cuando caen 
     private float currentImpulseTime = 0f;
     private Rigidbody2D enemyRB2D;
     private GameObject target;
