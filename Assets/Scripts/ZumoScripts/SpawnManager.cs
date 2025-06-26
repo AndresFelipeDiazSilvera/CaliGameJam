@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class SpawnManager : MonoBehaviour
 {
@@ -182,7 +183,6 @@ public class SpawnManager : MonoBehaviour
     //metodo para reiniciar
     public void Reset()
     {
-        wave = 1;
-        enemiesSpawnedInWave = 0;
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }

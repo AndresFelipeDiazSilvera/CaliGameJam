@@ -17,19 +17,20 @@ public class FallInVoid : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             collision.gameObject.GetComponent<PlayerController>().isFalling = true;
+            //muerte player
             StartCoroutine(DeathPlayer(collision.gameObject));
         }
         if (collision.gameObject.CompareTag("Enemy"))
         {
             collision.gameObject.GetComponent<EnemyAi>().isFalling=true;
-            //TO DO implementar muerte
+            //muerte enemigo
             StartCoroutine(DeathEnemy(collision.gameObject));
         }
     }
 
     public IEnumerator DeathEnemy(GameObject Enemy)
     {
-        Debug.Log("El enemigo está muriendo...");
+        Debug.Log("El enemigo esta muriendo...");
 
         //TO DO Activar animacion de muerte
 
@@ -50,7 +51,7 @@ public class FallInVoid : MonoBehaviour
     }
     public IEnumerator DeathPlayer(GameObject player)
     {
-        Debug.Log("El enemigo está muriendo...");
+        Debug.Log("El player esta muriendo...");
 
         //TO DO Activar animacion de muerte
 
