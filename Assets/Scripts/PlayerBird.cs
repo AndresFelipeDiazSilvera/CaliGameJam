@@ -4,21 +4,23 @@ public class PlayerBird : MonoBehaviour
 {
     [Header("Movement Settings")]
     public float jumpForce = 6f;
-    
+
     private Rigidbody2D rb;
     private bool isAlive = true;
     private bool gameStarted = false;
-    
+    private Animator animator;
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         // Iniciar sin gravedad hasta el primer salto
+        animator = GetComponent<Animator>();
     }
-    
+
     void Update()
     {
         if (!isAlive) return;
-        
+
         // Detectar entrada de espacio
         if (Input.GetKeyDown(KeyCode.Space))
         {
@@ -28,29 +30,29 @@ public class PlayerBird : MonoBehaviour
             }
             Jump();
         }
-        
+
         // Rotar el pajaro según velocidad
         if (gameStarted)
         {
             RotateBird();
         }
     }
-    
+
     void StartGame()
     {
         gameStarted = true;
         rb.gravityScale = 2f;
     }
-    
+
     void Jump()
     {
         if (!gameStarted) return;
-        
+
         // Resetear velocidad y aplicar salto
         rb.linearVelocity = Vector2.zero;
         rb.linearVelocity = Vector2.up * jumpForce;
     }
-    
+
     void RotateBird()
     {
         // Rotar basado en la velocidad vertical
@@ -58,7 +60,7 @@ public class PlayerBird : MonoBehaviour
         angle = Mathf.Clamp(angle, -90f, 45f);
         transform.rotation = Quaternion.Euler(0, 0, angle);
     }
-    
+
     void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Obstacle"))
@@ -70,7 +72,7 @@ public class PlayerBird : MonoBehaviour
             CollectItem(other.gameObject);
         }
     }
-    
+
     void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Obstacle"))
@@ -78,7 +80,7 @@ public class PlayerBird : MonoBehaviour
             Die();
         }
     }
-    
+
     void CollectItem(GameObject item)
     {
         // Buscar GameManagerBird
@@ -89,29 +91,32 @@ public class PlayerBird : MonoBehaviour
         }
         Destroy(item);
     }
-    
+
     void Die()
     {
         if (!isAlive) return;
-        
+
         isAlive = false;
         rb.linearVelocity = Vector2.zero;
-        
+
+        // Activar la animación de muerte
+        animator.SetBool("isDead", true);
+
         // Notificar al GameManagerBird
         GameManagerBird gameManager = FindAnyObjectByType<GameManagerBird>();
         if (gameManager != null)
         {
             gameManager.GameOver();
         }
-        
+
         Debug.Log("Player died!");
     }
-    
+
     public bool IsAlive()
     {
         return isAlive;
     }
-    
+
     public bool HasStarted()
     {
         return gameStarted;
