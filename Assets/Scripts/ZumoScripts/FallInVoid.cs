@@ -16,10 +16,12 @@ public class FallInVoid : MonoBehaviour
         Debug.Log("cayo al vacio");
         if (collision.gameObject.CompareTag("Player"))
         {
+            collision.gameObject.GetComponent<PlayerController>().isFalling = true;
             StartCoroutine(DeathPlayer(collision.gameObject));
         }
         if (collision.gameObject.CompareTag("Enemy"))
         {
+            collision.gameObject.GetComponent<EnemyAi>().isFalling=true;
             //TO DO implementar muerte
             StartCoroutine(DeathEnemy(collision.gameObject));
         }
@@ -38,7 +40,7 @@ public class FallInVoid : MonoBehaviour
         }*/
 
         // Esperar a que la animacion termine
-        yield return new WaitForSeconds(0.1f);
+        yield return new WaitForSeconds(1f);
 
         // Notificar al spawnManager (si existe)
         if (spawnManager != null)
@@ -59,9 +61,11 @@ public class FallInVoid : MonoBehaviour
         }*/
 
         // Esperar a que la animacion termine
-        yield return new WaitForSeconds(0.1f);
+        yield return new WaitForSeconds(1f);
 
         //resetea lo pocision
         player.transform.position = new Vector2(0, 0);
+        player.GetComponent<PlayerController>().isFalling = false;
+        spawnManager.Reset();
     }
 }

@@ -34,7 +34,7 @@ public class PlayerController : MonoBehaviour
     }
     void FixedUpdate()
     {
-        if (!isBeingImpulsed)
+        if (!isBeingImpulsed && !isFalling)
         {
             Vector2 movimiento = inputs.normalized;
             if (movimiento != Vector2.zero)

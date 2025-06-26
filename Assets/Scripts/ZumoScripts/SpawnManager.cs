@@ -8,8 +8,8 @@ public class SpawnManager : MonoBehaviour
     [SerializeField] GameObject enemy2;
     [SerializeField] GameObject player;
     [SerializeField] List<GameObject> enemies = new List<GameObject>();
-    [SerializeField] int rangeSpawnMax=10;
-    [SerializeField] int rangeSpawnMin=-10;
+    [SerializeField] int rangeSpawnMax = 10;
+    [SerializeField] int rangeSpawnMin = -10;
     public int poolSize = 10;
     public int wave;
     public bool isSpawningWave;
@@ -178,5 +178,11 @@ public class SpawnManager : MonoBehaviour
     public void EnemyDied(GameObject enemyDie)
     {
         enemyDie.SetActive(false);
+    }
+    //metodo para reiniciar
+    public void Reset()
+    {
+        wave = 1;
+        enemiesSpawnedInWave = 0;
     }
 }

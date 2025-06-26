@@ -29,6 +29,7 @@ public class EnemyAi : MonoBehaviour
     void OnEnable()
     {
         isBeingImpulsed = false;
+        isFalling = false;
         currentImpulseTime = 0f;
     }
 
@@ -56,7 +57,7 @@ public class EnemyAi : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (target != null && !isBeingImpulsed && !enemyAttack.IsAttackingRange()) // <-- ¡Cambio clave aquí!
+        if (target != null && !isBeingImpulsed && !enemyAttack.IsAttackingRange() && !isFalling) 
         {
             Vector2 lookDirection = (target.transform.position - transform.position).normalized;
             enemyRB2D.AddForce(lookDirection * speed);
@@ -64,7 +65,7 @@ public class EnemyAi : MonoBehaviour
             Debug.DrawLine(transform.position, target.transform.position, Color.red);
             Debug.DrawRay(transform.position, lookDirection * 5f, Color.blue);
         }
-        else if (enemyAttack.IsAttackingRange()) // Si está en rango de ataque, reducir la velocidad
+        else if (enemyAttack.IsAttackingRange()) // Si esta en rango de ataque, reducir la velocidad
         {
             enemyRB2D.linearVelocity *= 0.5f; // Reduce la velocidad gradualmente para detenerse
         }
