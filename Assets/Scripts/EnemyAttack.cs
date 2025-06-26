@@ -67,7 +67,7 @@ public class EnemyAttack : MonoBehaviour
     {
         if (targetPlayer == null) return false; // Si no hay objetivo, no esta en rango de ataque
         float distanceToPlayer = Vector2.Distance(transform.position, targetPlayer.position);
-        return distanceToPlayer <= attackRange;
+        return distanceToPlayer < attackRange;
     }
 
     void Update()
