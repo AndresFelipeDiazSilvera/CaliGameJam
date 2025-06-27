@@ -100,7 +100,7 @@ public class SpawnManager : MonoBehaviour
         while (true) // Este bucle permite que el juego continue con nuevas oleadas indefinidamente
         {
             //iniciar una nueva oleada
-            if (!isSpawningWave)
+            if (!isSpawningWave && wave!=5)
             {
                 wave++; // Incrementa el numero de oleada
                 blockSize += 2;
