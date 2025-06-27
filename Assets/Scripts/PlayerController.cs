@@ -6,25 +6,52 @@ public class PlayerController : MonoBehaviour
     [SerializeField] float speed;
     [SerializeField] float windForce;
     [SerializeField] PlayerInput playerInput;
+    [SerializeField] float impulseDuration = 0.5f;
     public Vector2 inputs;
+    public bool isBeingImpulsed = false;
+    private float currentImpulseTime = 0f;
     private Rigidbody2D rB2D;
+    private Obstacules obstacules;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         rB2D = GetComponent<Rigidbody2D>();
+        obstacules = FindFirstObjectByType<Obstacules>();
     }
 
     // Update is called once per frame
     void Update()
     {
         inputs = playerInput.actions["Move"].ReadValue<Vector2>();
+        if (isBeingImpulsed)
+        {
+            currentImpulseTime += Time.deltaTime;
+            if (currentImpulseTime >= impulseDuration)
+            {
+                isBeingImpulsed = false;
+                currentImpulseTime = 0f;
+            }
+        }
     }
     void FixedUpdate()
     {
-        Vector2 movimiento = inputs.normalized;
-        if (movimiento!=Vector2.zero)
+        if (!isBeingImpulsed)
         {
-            rB2D.MovePosition(rB2D.position + speed * Time.fixedDeltaTime * movimiento);
+            Vector2 movimiento = inputs.normalized;
+            if (movimiento != Vector2.zero)
+            {
+                //movimineto 
+                rB2D.AddForce(movimiento * speed , ForceMode2D.Force);
+            }
+            else
+            {
+                rB2D.linearVelocity *= 0.9f; // Reduce la velocidad gradualmente si no hay input
+            }
         }
+    }
+     public void StartImpulse()
+    {
+        isBeingImpulsed = true;
+        currentImpulseTime = 0f;
     }
 }
