@@ -7,6 +7,7 @@ public class GameManagerBird : MonoBehaviour
     [Header("Game State")]
     private int score = 0;
     private bool gameActive = true;
+    private int currentLevel = 1;
     
     void Awake()
     {
@@ -38,13 +39,18 @@ public class GameManagerBird : MonoBehaviour
     {
         gameActive = true;
         score = 0;
+        currentLevel = 1;
         Time.timeScale = 1f;
+        Debug.Log("¡Juego iniciado! Nivel: " + currentLevel);
     }
     
     public void GameOver()
     {
         gameActive = false;
-        Debug.Log("Game Over! Score: " + score + " - Press R to restart");
+        Debug.Log("Game Over!");
+        Debug.Log("Puntuación Final: " + score);
+        Debug.Log("Nivel Alcanzado: " + currentLevel);
+        Debug.Log("Presiona R para reiniciar");
     }
     
     public void RestartGame()
@@ -56,7 +62,34 @@ public class GameManagerBird : MonoBehaviour
     public void AddScore(int points)
     {
         score += points;
-        Debug.Log("Score: " + score);
+        UpdateLevel();
+        Debug.Log("Score: " + score + " | Nivel: " + currentLevel);
+    }
+    
+    void UpdateLevel()
+    {
+        int newLevel = 1;
+        
+        // Determinar nivel basado en puntuación
+        if (score >= 120)
+            newLevel = 3;
+        else if (score >= 50)
+            newLevel = 2;
+        else
+            newLevel = 1;
+        
+        // Notificar cambio de nivel
+        if (newLevel > currentLevel)
+        {
+            currentLevel = newLevel;
+            OnLevelUp();
+        }
+    }
+    
+    void OnLevelUp()
+    {
+        Debug.Log("¡NIVEL " + currentLevel + " ALCANZADO!");
+        // Aquí puedes agregar efectos visuales, sonidos, etc.
     }
     
     public bool IsGameActive()
@@ -67,5 +100,10 @@ public class GameManagerBird : MonoBehaviour
     public int GetScore()
     {
         return score;
+    }
+    
+    public int GetCurrentLevel()
+    {
+        return currentLevel;
     }
 }

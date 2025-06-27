@@ -185,7 +185,9 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      "40 sin t\xEDtulo_20250626144654_0": -3517341181917150174
+      "40 sin t\xEDtulo_20250626144654_1": 5652614994865771032
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

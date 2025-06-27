@@ -329,7 +329,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1202922472}
-  - component: {fileID: 1202922471}
+  - component: {fileID: 1202922473}
   m_Layer: 0
   m_Name: ObstacleSpawner
   m_TagString: Untagged
@@ -337,23 +337,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1202922471
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1202922470}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ddcef4542cd8db54c8d7c6de841da7b2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  obstaclePrefab: {fileID: 5368273004778457498, guid: fd7d0c6199837d44389f96aa13686a25, type: 3}
-  collectiblePrefab: {fileID: 4886144419006698191, guid: d4dae7e878138e147b9f400ea0e77f04, type: 3}
-  spawnRate: 2
-  obstacleSpeed: 3
-  spawnRangeY: 3
 --- !u!4 &1202922472
 Transform:
   m_ObjectHideFlags: 0
@@ -369,6 +352,42 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1202922473
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1202922470}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3bf9d091d988f7a4995ad8be0e625d43, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  obstaclePrefab: {fileID: 5368273004778457498, guid: fd7d0c6199837d44389f96aa13686a25, type: 3}
+  collectiblePrefab: {fileID: 4886144419006698191, guid: d4dae7e878138e147b9f400ea0e77f04, type: 3}
+  difficultyLevels:
+  - levelName: 
+    scoreThreshold: 0
+    spawnRate: 0
+    obstacleSpeed: 0
+    spawnRangeY: 0
+    collectibleChance: 0
+    levelColor: {r: 1, g: 1, b: 1, a: 1}
+  - levelName: 
+    scoreThreshold: 0
+    spawnRate: 0
+    obstacleSpeed: 0
+    spawnRangeY: 0
+    collectibleChance: 0
+    levelColor: {r: 1, g: 1, b: 1, a: 1}
+  - levelName: 
+    scoreThreshold: 0
+    spawnRate: 0
+    obstacleSpeed: 0
+    spawnRangeY: 0
+    collectibleChance: 0
+    levelColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &1306429644
 GameObject:
   m_ObjectHideFlags: 0
