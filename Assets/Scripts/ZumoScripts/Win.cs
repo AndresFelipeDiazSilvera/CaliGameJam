@@ -12,7 +12,7 @@ public class Win : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (spawnManager.wave == 10)
+        if (spawnManager.wave == 10 && spawnManager.enemiesSpawnedInWave==0)
         {
             isWin = true;
         }
