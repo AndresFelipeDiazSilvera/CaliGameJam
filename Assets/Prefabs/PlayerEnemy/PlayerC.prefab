@@ -25,7 +25,7 @@ Transform:
   m_GameObject: {fileID: 2961598915974541346}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.8, y: 15.6, z: 0}
+  m_LocalPosition: {x: 0, y: 8, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -56,7 +56,7 @@ Transform:
   m_GameObject: {fileID: 5119272457715012300}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.2, y: 12.6, z: 0}
+  m_LocalPosition: {x: -6, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -74,10 +74,10 @@ GameObject:
   - component: {fileID: 7938591439176074569}
   - component: {fileID: 4024487552994647935}
   - component: {fileID: 7346833449959703970}
+  - component: {fileID: 3704230876388702148}
   - component: {fileID: 89598801076582173}
   - component: {fileID: 5355325556306501509}
   - component: {fileID: 3708896133313850508}
-  - component: {fileID: 3704230876388702148}
   m_Layer: 0
   m_Name: PlayerC
   m_TagString: Player
@@ -200,6 +200,33 @@ MonoBehaviour:
   inputs: {x: 0, y: 0}
   isBeingImpulsed: 0
   isFalling: 0
+--- !u!114 &3704230876388702148
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6538996155270276720}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a4d012f85c365941b5c40249675f3cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  windAttackPrefab: {fileID: 8352800229146912505, guid: 93cc0a8ef8ee15b4c985dc812e1f93c6, type: 3}
+  windSpawnConfigs:
+  - spawnPoint: {fileID: 3279299532610239343}
+    fixedWindDirection: {x: 0, y: 0}
+    fixedRotationAngleZ: -90
+  - spawnPoint: {fileID: 5643251912465144849}
+    fixedWindDirection: {x: 0, y: 0}
+    fixedRotationAngleZ: 90
+  - spawnPoint: {fileID: 1269388155318203451}
+    fixedWindDirection: {x: 0, y: 0}
+    fixedRotationAngleZ: 180
+  - spawnPoint: {fileID: 4364028379947203253}
+    fixedWindDirection: {x: 0, y: 0}
+    fixedRotationAngleZ: 0
+  attackCooldown: 1
 --- !u!50 &89598801076582173
 Rigidbody2D:
   serializedVersion: 5
@@ -294,33 +321,6 @@ MonoBehaviour:
   m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
---- !u!114 &3704230876388702148
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6538996155270276720}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6a4d012f85c365941b5c40249675f3cb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  windAttackPrefab: {fileID: 8352800229146912505, guid: 93cc0a8ef8ee15b4c985dc812e1f93c6, type: 3}
-  windSpawnConfigs:
-  - spawnPoint: {fileID: 3279299532610239343}
-    fixedWindDirection: {x: 0, y: 0}
-    fixedRotationAngleZ: 0
-  - spawnPoint: {fileID: 5643251912465144849}
-    fixedWindDirection: {x: 0, y: 0}
-    fixedRotationAngleZ: 0
-  - spawnPoint: {fileID: 1269388155318203451}
-    fixedWindDirection: {x: 0, y: 0}
-    fixedRotationAngleZ: 0
-  - spawnPoint: {fileID: 4364028379947203253}
-    fixedWindDirection: {x: 0, y: 0}
-    fixedRotationAngleZ: 0
-  attackCooldown: 1
 --- !u!1 &6601503937128047275
 GameObject:
   m_ObjectHideFlags: 0
@@ -346,7 +346,7 @@ Transform:
   m_GameObject: {fileID: 6601503937128047275}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.8, y: 9.6, z: 0}
+  m_LocalPosition: {x: 0, y: -8, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -377,7 +377,7 @@ Transform:
   m_GameObject: {fileID: 8374781400496210486}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 4.8, y: 12.6, z: 0}
+  m_LocalPosition: {x: 6, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

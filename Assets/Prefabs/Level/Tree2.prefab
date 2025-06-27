@@ -98,7 +98,7 @@ GameObject:
   - component: {fileID: 1042981644513103247}
   m_Layer: 0
   m_Name: Tree2
-  m_TagString: Untagged
+  m_TagString: Obstaculo2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -131,6 +131,7 @@ GameObject:
   - component: {fileID: 6081198378703678905}
   - component: {fileID: 3878702718958918057}
   - component: {fileID: 7671954946827605811}
+  - component: {fileID: 6390325776458122090}
   m_Layer: 0
   m_Name: Tronco_ramas_1
   m_TagString: Untagged
@@ -245,3 +246,16 @@ CapsuleCollider2D:
   m_Offset: {x: -0.09031868, y: 2.2278671}
   m_Size: {x: 2.9968104, y: 13.389069}
   m_Direction: 0
+--- !u!114 &6390325776458122090
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8876512765348706616}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8a420413962a404199b77c37e8cc188, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  forceImpulse: 5
