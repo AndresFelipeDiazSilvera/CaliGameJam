@@ -4,26 +4,26 @@ public class EnemyAi : MonoBehaviour
 {
     [SerializeField] float speed;
     [SerializeField] float windForce;
-    [SerializeField] float impulseDuration; 
+    [SerializeField] float impulseDuration;
     [SerializeField] private EnemyAttack enemyAttack;
-    public bool isBeingImpulsed = false; // Estado para cuando el enemigo es empujado por una fuerza externa
-    public bool isFalling = false; //estado para cuando caen 
+
+    public bool isBeingImpulsed = false;
+    public bool isFalling = false;
     private float currentImpulseTime = 0f;
     private Rigidbody2D enemyRB2D;
     private GameObject target;
+    private Animator animator; 
 
     void Awake()
     {
         enemyRB2D = GetComponent<Rigidbody2D>();
-        // Asegúrate de que enemyAttack esté asignado, ya sea en el Inspector o con GetComponent
+        animator = GetComponent<Animator>(); 
+
         if (enemyAttack == null)
         {
             enemyAttack = GetComponent<EnemyAttack>();
         }
-        if (enemyAttack == null)
-        {
-            Debug.LogError("EnemyAI: No se encontró el script EnemyAttack en este GameObject. ¡Asegúrate de agregarlo!");
-        }
+        
     }
 
     void OnEnable()
@@ -42,7 +42,7 @@ public class EnemyAi : MonoBehaviour
         }
     }
 
-    void Update() // Para controlar la duración del impulso
+    void Update()
     {
         if (isBeingImpulsed)
         {
@@ -53,11 +53,13 @@ public class EnemyAi : MonoBehaviour
                 currentImpulseTime = 0f;
             }
         }
+        
+        UpdateAnimations();
     }
 
     private void FixedUpdate()
     {
-        if (target != null && !isBeingImpulsed && !enemyAttack.IsAttackingRange() && !isFalling) 
+        if (target != null && !isBeingImpulsed && !enemyAttack.IsAttackingRange() && !isFalling)
         {
             Vector2 lookDirection = (target.transform.position - transform.position).normalized;
             enemyRB2D.AddForce(lookDirection * speed);
@@ -65,11 +67,27 @@ public class EnemyAi : MonoBehaviour
             Debug.DrawLine(transform.position, target.transform.position, Color.red);
             Debug.DrawRay(transform.position, lookDirection * 5f, Color.blue);
         }
-        else if (enemyAttack.IsAttackingRange()) // Si esta en rango de ataque, reducir la velocidad
+        else if (enemyAttack.IsAttackingRange())
         {
-            enemyRB2D.linearVelocity *= 0.5f; // Reduce la velocidad gradualmente para detenerse
+            enemyRB2D.linearVelocity *= 0.5f;
         }
     }
+
+    
+   private void UpdateAnimations()
+{
+    
+    animator.SetFloat("Speed", enemyRB2D.linearVelocity.sqrMagnitude);
+
+   
+    if (enemyRB2D.linearVelocity.sqrMagnitude > 0.1f) 
+    {
+       
+        Vector2 moveDirection = enemyRB2D.linearVelocity.normalized;
+        animator.SetFloat("Horizontal", moveDirection.x);
+        animator.SetFloat("Vertical", moveDirection.y);
+    }
+}
 
     public void StartImpulse()
     {
@@ -77,7 +95,7 @@ public class EnemyAi : MonoBehaviour
         currentImpulseTime = 0f;
         if (enemyRB2D != null)
         {
-            enemyRB2D.linearVelocity = Vector2.zero; // Detener movimiento al ser impulsado
+            enemyRB2D.linearVelocity = Vector2.zero;
         }
     }
 
