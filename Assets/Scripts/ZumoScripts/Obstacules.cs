@@ -9,6 +9,7 @@ public class Obstacules : MonoBehaviour
 
         if (collision.gameObject.CompareTag("Player") || collision.gameObject.CompareTag("Enemy"))
         {
+            //TO DO LLAMAR LA ANIMACION CUANDO CHOCAN CON EL OBSTACULO
             Rigidbody2D rB2D = collision.gameObject.GetComponent<Rigidbody2D>();
             if (rB2D != null)
             {
@@ -28,13 +29,6 @@ public class Obstacules : MonoBehaviour
 
     public void PlayAnimacion()
     {
-        if (gameObject.CompareTag("Obstaculo1"))
-        {
-            //TO DO implementar animacion y particulas
-        }
-        if (gameObject.CompareTag("Obstaculo2"))
-        {
-             //TO DO implementar animacion y particulas
-        }
+        //TO DO IMPLEMENTAR ANIMACION Y PARTICULAS
     }
 }
