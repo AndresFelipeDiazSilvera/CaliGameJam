@@ -4,11 +4,6 @@ public class Win : MonoBehaviour
 {
     [SerializeField] SpawnManager spawnManager;
     public bool isWin = false;
-    private bool hasWonDisplayed = false;
-    void Start()
-    {
-
-    }
 
     // Update is called once per frame
     void Update()
@@ -16,16 +11,11 @@ public class Win : MonoBehaviour
         if (spawnManager.wave == 5 && spawnManager.EnemysEnable() == 0)
         {
             isWin = true;
-            if (hasWonDisplayed)
-            {
-                loadNextMiniGame();
-                hasWonDisplayed = false;
-            }
+            loadNextMiniGame();
         }
         else
         {
             isWin = false;
-            hasWonDisplayed = false;
         }
     }
 
