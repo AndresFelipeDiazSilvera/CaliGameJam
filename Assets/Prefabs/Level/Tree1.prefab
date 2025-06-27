@@ -225,7 +225,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f8a420413962a404199b77c37e8cc188, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  forceImpulse: 5
+  forceImpulse: 35
 --- !u!1 &5138608293399843935
 GameObject:
   m_ObjectHideFlags: 0
