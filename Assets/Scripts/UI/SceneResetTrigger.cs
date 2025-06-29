@@ -7,7 +7,6 @@ public class SceneResetTrigger : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            // Reloads the current active scene
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
     }

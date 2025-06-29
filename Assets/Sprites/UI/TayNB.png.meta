@@ -1,0 +1,676 @@
+fileFormatVersion: 2
+guid: b801d4f39f58a0a4c99daafd2663b2ee
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -8341365087311627217
+    second: TayNB_0
+  - first:
+      213: -4833422483986393295
+    second: TayNB_1
+  - first:
+      213: 1536124796540790804
+    second: TayNB_2
+  - first:
+      213: -5910862137061801747
+    second: TayNB_3
+  - first:
+      213: -2044742231739486001
+    second: TayNB_4
+  - first:
+      213: 158566582393830208
+    second: TayNB_5
+  - first:
+      213: -8551212877563151363
+    second: TayNB_6
+  - first:
+      213: -2067669765061451316
+    second: TayNB_7
+  - first:
+      213: 2497962284903622758
+    second: TayNB_8
+  - first:
+      213: 8942186234462565023
+    second: TayNB_9
+  - first:
+      213: 4913324975749291618
+    second: TayNB_10
+  - first:
+      213: -4149798888393929642
+    second: TayNB_11
+  - first:
+      213: -8353379646322717201
+    second: TayNB_12
+  - first:
+      213: 6277644807601266267
+    second: TayNB_13
+  - first:
+      213: -7218951233630064567
+    second: TayNB_14
+  - first:
+      213: 4184404529335036289
+    second: TayNB_15
+  - first:
+      213: -5885902819892568058
+    second: TayNB_16
+  - first:
+      213: -7980642102453450223
+    second: TayNB_17
+  - first:
+      213: -8209341312316699130
+    second: TayNB_18
+  - first:
+      213: 7620881220389288237
+    second: TayNB_19
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: TayNB_0
+      rect:
+        serializedVersion: 2
+        x: 1455
+        y: 1415
+        width: 57
+        height: 158
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f2cf1f4c5a48d3c80800000000000000
+      internalID: -8341365087311627217
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TayNB_1
+      rect:
+        serializedVersion: 2
+        x: 1641
+        y: 1366
+        width: 113
+        height: 225
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 137da900cdb3cecb0800000000000000
+      internalID: -4833422483986393295
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TayNB_2
+      rect:
+        serializedVersion: 2
+        x: 1794
+        y: 1338
+        width: 162
+        height: 140
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 418ab7c1d59615510800000000000000
+      internalID: 1536124796540790804
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TayNB_3
+      rect:
+        serializedVersion: 2
+        x: 1255
+        y: 905
+        width: 599
+        height: 451
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: de00024143668fda0800000000000000
+      internalID: -5910862137061801747
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TayNB_4
+      rect:
+        serializedVersion: 2
+        x: 1449
+        y: 1337
+        width: 143
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fc0bde316cd9f93e0800000000000000
+      internalID: -2044742231739486001
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TayNB_5
+      rect:
+        serializedVersion: 2
+        x: 1866
+        y: 1205
+        width: 204
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 04bf4d07777533200800000000000000
+      internalID: 158566582393830208
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TayNB_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 291
+        width: 560
+        height: 757
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dfb3a12b13df35980800000000000000
+      internalID: -8551212877563151363
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TayNB_7
+      rect:
+        serializedVersion: 2
+        x: 627
+        y: 930
+        width: 484
+        height: 176
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cc162bcbd492e43e0800000000000000
+      internalID: -2067669765061451316
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TayNB_8
+      rect:
+        serializedVersion: 2
+        x: 862
+        y: 469
+        width: 317
+        height: 473
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 668e00e967b8aa220800000000000000
+      internalID: 2497962284903622758
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TayNB_9
+      rect:
+        serializedVersion: 2
+        x: 1179
+        y: 497
+        width: 314
+        height: 468
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f927784a007091c70800000000000000
+      internalID: 8942186234462565023
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TayNB_10
+      rect:
+        serializedVersion: 2
+        x: 1480
+        y: 508
+        width: 368
+        height: 450
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 26e57959803af2440800000000000000
+      internalID: 4913324975749291618
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TayNB_11
+      rect:
+        serializedVersion: 2
+        x: 1809
+        y: 464
+        width: 358
+        height: 553
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 65c08f7c5e3f866c0800000000000000
+      internalID: -4149798888393929642
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TayNB_12
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 346
+        width: 360
+        height: 533
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fedc4f24875d21c80800000000000000
+      internalID: -8353379646322717201
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TayNB_13
+      rect:
+        serializedVersion: 2
+        x: 610
+        y: 435
+        width: 304
+        height: 485
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b5e162f21bcae1750800000000000000
+      internalID: 6277644807601266267
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TayNB_14
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 214
+        width: 1713
+        height: 215
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 940bc94c91221db90800000000000000
+      internalID: -7218951233630064567
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TayNB_15
+      rect:
+        serializedVersion: 2
+        x: 454
+        y: 0
+        width: 246
+        height: 257
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 189ec8fdfbdf11a30800000000000000
+      internalID: 4184404529335036289
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TayNB_16
+      rect:
+        serializedVersion: 2
+        x: 714
+        y: 30
+        width: 259
+        height: 266
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 60065d5f192115ea0800000000000000
+      internalID: -5885902819892568058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TayNB_17
+      rect:
+        serializedVersion: 2
+        x: 1001
+        y: 69
+        width: 300
+        height: 257
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 11a4cb38a401f3190800000000000000
+      internalID: -7980642102453450223
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TayNB_18
+      rect:
+        serializedVersion: 2
+        x: 1311
+        y: 73
+        width: 220
+        height: 251
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 60e8c67429f821e80800000000000000
+      internalID: -8209341312316699130
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TayNB_19
+      rect:
+        serializedVersion: 2
+        x: 1510
+        y: 57
+        width: 247
+        height: 255
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d29bfb0c71fc2c960800000000000000
+      internalID: 7620881220389288237
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      TayNB_0: -8341365087311627217
+      TayNB_1: -4833422483986393295
+      TayNB_10: 4913324975749291618
+      TayNB_11: -4149798888393929642
+      TayNB_12: -8353379646322717201
+      TayNB_13: 6277644807601266267
+      TayNB_14: -7218951233630064567
+      TayNB_15: 4184404529335036289
+      TayNB_16: -5885902819892568058
+      TayNB_17: -7980642102453450223
+      TayNB_18: -8209341312316699130
+      TayNB_19: 7620881220389288237
+      TayNB_2: 1536124796540790804
+      TayNB_3: -5910862137061801747
+      TayNB_4: -2044742231739486001
+      TayNB_5: 158566582393830208
+      TayNB_6: -8551212877563151363
+      TayNB_7: -2067669765061451316
+      TayNB_8: 2497962284903622758
+      TayNB_9: 8942186234462565023
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

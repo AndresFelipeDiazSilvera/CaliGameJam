@@ -373,7 +373,16 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      PlayAgainButton_0: 3845639479310911271
+      PlayAgainButton_1: -2844428543761093443
+      PlayAgainButton_2: 256186316369768604
+      PlayAgainButton_3: -5448635083235794160
+      PlayAgainButton_4: -3185103247169456499
+      PlayAgainButton_5: -3463751928623436352
+      PlayAgainButton_6: 7342564847518836963
+      PlayAgainButton_7: -6609760223574607928
+      PlayAgainButton_8: -2030618102851767547
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

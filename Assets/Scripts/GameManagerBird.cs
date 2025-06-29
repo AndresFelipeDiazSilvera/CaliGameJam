@@ -3,12 +3,13 @@ using UnityEngine;
 public class GameManagerBird : MonoBehaviour
 {
     public static GameManagerBird Instance;
-    
+
     [Header("Game State")]
     private int score = 0;
     private bool gameActive = true;
     private int currentLevel = 1;
-    
+    public PlayerBird player;
+
     void Awake()
     {
         if (Instance == null)
@@ -20,12 +21,12 @@ public class GameManagerBird : MonoBehaviour
             Destroy(gameObject);
         }
     }
-    
+
     void Start()
     {
-        StartGame();
+        Time.timeScale = 0f;
     }
-    
+
     void Update()
     {
         // Reiniciar juego con R
@@ -34,7 +35,7 @@ public class GameManagerBird : MonoBehaviour
             RestartGame();
         }
     }
-    
+
     public void StartGame()
     {
         gameActive = true;
@@ -43,7 +44,7 @@ public class GameManagerBird : MonoBehaviour
         Time.timeScale = 1f;
         Debug.Log("¡Juego iniciado! Nivel: " + currentLevel);
     }
-    
+
     public void GameOver()
     {
         gameActive = false;
@@ -52,24 +53,24 @@ public class GameManagerBird : MonoBehaviour
         Debug.Log("Nivel Alcanzado: " + currentLevel);
         Debug.Log("Presiona R para reiniciar");
     }
-    
+
     public void RestartGame()
     {
         UnityEngine.SceneManagement.SceneManager.LoadScene(
             UnityEngine.SceneManagement.SceneManager.GetActiveScene().name);
     }
-    
+
     public void AddScore(int points)
     {
         score += points;
         UpdateLevel();
         Debug.Log("Score: " + score + " | Nivel: " + currentLevel);
     }
-    
+
     void UpdateLevel()
     {
         int newLevel = 1;
-        
+
         // Determinar nivel basado en puntuación
         if (score >= 120)
             newLevel = 3;
@@ -77,7 +78,7 @@ public class GameManagerBird : MonoBehaviour
             newLevel = 2;
         else
             newLevel = 1;
-        
+
         // Notificar cambio de nivel
         if (newLevel > currentLevel)
         {
@@ -85,25 +86,32 @@ public class GameManagerBird : MonoBehaviour
             OnLevelUp();
         }
     }
-    
+
     void OnLevelUp()
     {
         Debug.Log("¡NIVEL " + currentLevel + " ALCANZADO!");
         // Aquí puedes agregar efectos visuales, sonidos, etc.
     }
-    
+
     public bool IsGameActive()
     {
         return gameActive;
     }
-    
+
     public int GetScore()
     {
         return score;
     }
-    
+
     public int GetCurrentLevel()
     {
         return currentLevel;
     }
+
+    public void StartGameFromMenu()
+    {
+        Time.timeScale = 1f; // Reanuda el tiempo si estaba en pausa
+        player.ActivateGameplay(); // Nuevo método que verás abajo
+    }
+
 }

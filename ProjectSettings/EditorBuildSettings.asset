@@ -6,17 +6,59 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/LogoScene.unity
+    guid: a476567678f2ce64a9e3a75a82c2ef87
+  - enabled: 1
     path: Assets/Scenes/MainMenu.unity
     guid: a4f0d60729608004b9aeec392d8aaa37
   - enabled: 1
-    path: Assets/Scenes/Monk of the Wind.unity
-    guid: 7b4d98f21e51611479b48873ebeada37
+    path: Assets/Scenes/CelestialMonk1.unity
+    guid: cfc8fff82cfedc94bbe12b816814e15a
   - enabled: 1
     path: Assets/Scenes/WindBird.unity
-    guid: fc414b9215e95f04cad774a17547d9cf
+    guid: 4ffc42355f7ac8145b79e4bc228e02a5
   - enabled: 1
     path: Assets/Scenes/PaperAirplane.unity
     guid: 9a92658abb69db841a4a2bc09dca0953
+  - enabled: 1
+    path: Assets/Scenes/CelestialMonk2.unity
+    guid: f6295e92f195a9d40889169eb99f1cbb
+  - enabled: 1
+    path: Assets/Scenes/WindBird 1.unity
+    guid: fc661cbe1def1a44080fbb360c6c02d2
+  - enabled: 1
+    path: Assets/Scenes/PaperAirplane 1.unity
+    guid: c8502b6a779cff744807b42cb08d02a3
+  - enabled: 1
+    path: Assets/Scenes/CelestialMonk3.unity
+    guid: e5dc67cb639669d4584f1bb05dce2b44
+  - enabled: 1
+    path: Assets/Scenes/WindBird 2.unity
+    guid: a23f8c162f033bf42bc9a86204b9dfd0
+  - enabled: 1
+    path: Assets/Scenes/PaperAirplane 2.unity
+    guid: 8b544d3115107d842b6dca156817a163
+  - enabled: 1
+    path: Assets/Scenes/CelestialMonk4.unity
+    guid: 2d38984c6f3741f4a880174d569a47d9
+  - enabled: 1
+    path: Assets/Scenes/WindBird 3.unity
+    guid: 51e30574d38601044abe86c4aaa579cd
+  - enabled: 1
+    path: Assets/Scenes/PaperAirplane 3.unity
+    guid: e729fae3185921441ba2b4411bc2f637
+  - enabled: 1
+    path: Assets/Scenes/CelestialMonk5.unity
+    guid: 4f81baa896a4c7f4a991410bcfe407c9
+  - enabled: 1
+    path: Assets/Scenes/WindBird 4.unity
+    guid: eaa2db82968f7ef408dc674f0753fc9f
+  - enabled: 1
+    path: Assets/Scenes/PaperAirplane 4.unity
+    guid: b3f5a62fc5df95a4fa6116a0b8df5e9a
+  - enabled: 1
+    path: Assets/Scenes/WinScene.unity
+    guid: d99fc002f21c342488f9d6866ea37c63
   - enabled: 1
     path: Assets/Scenes/GameOver.unity
     guid: b96974e2fe633ce4782d5bcc0b3be18d

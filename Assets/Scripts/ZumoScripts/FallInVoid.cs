@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class FallInVoid : MonoBehaviour
 {
@@ -34,6 +35,7 @@ public class FallInVoid : MonoBehaviour
     {
         Debug.Log("El enemigo esta muriendo...");
         particle = Enemy.gameObject.GetComponent<EnemyAi>().particle;
+
         //ANIMACION Y PARTICULAS
         if (!particle.isPlaying)
         {
@@ -54,6 +56,8 @@ public class FallInVoid : MonoBehaviour
         {
             spawnManager.EnemyDied(Enemy);
         }
+
+        Enemy.gameObject.SetActive(false);
     }
     public IEnumerator DeathPlayer(GameObject player)
     {
@@ -76,8 +80,6 @@ public class FallInVoid : MonoBehaviour
         yield return new WaitForSeconds(1f);
 
         //resetea lo pocision
-        player.transform.position = new Vector2(0, 0);
-        player.GetComponent<PlayerController>().isFalling = false;
-        spawnManager.Reset();
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }

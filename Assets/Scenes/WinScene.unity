@@ -292,7 +292,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64381e1110e8a924f9e797b925f82d4b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  firstScene: InitScene
+  firstScene: MainMenu
 --- !u!4 &840451855
 Transform:
   m_ObjectHideFlags: 0

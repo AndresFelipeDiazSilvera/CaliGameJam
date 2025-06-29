@@ -13,8 +13,8 @@ public class PlayerBird : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        // Iniciar sin gravedad hasta el primer salto
         animator = GetComponent<Animator>();
+        rb.gravityScale = 2f; // Activar gravedad desde el inicio
     }
 
     void Update()
@@ -41,7 +41,7 @@ public class PlayerBird : MonoBehaviour
     void StartGame()
     {
         gameStarted = true;
-        rb.gravityScale = 2f;
+        // Ya no es necesario modificar gravityScale aquí
     }
 
     void Jump()
@@ -120,5 +120,11 @@ public class PlayerBird : MonoBehaviour
     public bool HasStarted()
     {
         return gameStarted;
+    }
+
+    public void ActivateGameplay()
+    {
+        gameStarted = true;
+        // Ya no es necesario modificar gravityScale aquí
     }
 }
