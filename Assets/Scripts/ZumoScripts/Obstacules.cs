@@ -3,13 +3,20 @@ using UnityEngine;
 public class Obstacules : MonoBehaviour
 {
     [SerializeField] float forceImpulse;
-     void OnCollisionEnter2D(Collision2D collision)
+    [SerializeField] ParticleSystem particle;
+    private AudioManager audioManager;
+    void Start()
+    {
+        audioManager = FindAnyObjectByType<AudioManager>();
+    }
+    void OnCollisionEnter2D(Collision2D collision)
     {
         Debug.Log("Obstáculo chocó con: " + collision.gameObject.tag);
 
         if (collision.gameObject.CompareTag("Player") || collision.gameObject.CompareTag("Enemy"))
         {
             //TO DO LLAMAR LA ANIMACION CUANDO CHOCAN CON EL OBSTACULO
+
             Rigidbody2D rB2D = collision.gameObject.GetComponent<Rigidbody2D>();
             if (rB2D != null)
             {
@@ -24,11 +31,18 @@ public class Obstacules : MonoBehaviour
                     player.StartImpulse();
                 }
             }
+            PlayAnimacion();
         }
     }
 
     public void PlayAnimacion()
     {
         //TO DO IMPLEMENTAR ANIMACION Y PARTICULAS
+        if (!particle.isPlaying)
+        {
+            particle.Play();
+            audioManager.PlayAudioCrash();
+        }
+        particle.Play();
     }
 }

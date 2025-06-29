@@ -16,12 +16,14 @@ public class EnemyAttack : MonoBehaviour
 
     [SerializeField] private float attackCooldown = 2f;
     [SerializeField] private float attackRange = 4f;
+    private AudioManager audioManager;
     public Transform targetPlayer; 
     private bool canAttack = true;
     private EnemyAi enemyAi; 
 
     void Awake() 
     {
+        audioManager = FindAnyObjectByType<AudioManager>();
         enemyAi = GetComponent<EnemyAi>(); 
         if (enemyAi == null)
         {
@@ -120,7 +122,9 @@ public class EnemyAttack : MonoBehaviour
         AttackSystem windScript = currentWindAttack.GetComponent<AttackSystem>();
         if (windScript != null)
         {
+            windScript.attacker = this.gameObject; 
             windScript.windDirection = windDirection;
+            audioManager.PlayAudioEnemyAttack();
         }
         else
         {

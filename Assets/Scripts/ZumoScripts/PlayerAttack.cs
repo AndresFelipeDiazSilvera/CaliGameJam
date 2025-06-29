@@ -22,10 +22,12 @@ public class PlayerAttack : MonoBehaviour
     private Camera mainCamera;
     private bool canAttack = true;
     [SerializeField] private float attackCooldown;
+    private AudioManager audioManager;
 
     void Start()
     {
         mainCamera = Camera.main;
+        audioManager = FindAnyObjectByType<AudioManager>();
         if (mainCamera == null)
         {
             Debug.LogError("PlayerAttack: No se encontro una camara principal con el tag 'MainCamera'. El ataque de viento no funcionara correctamente.");
@@ -113,6 +115,7 @@ public class PlayerAttack : MonoBehaviour
         {
             // Asignar la direccion del viento
             windScript.windDirection = windDirection;
+            audioManager.PlayAudioPlayerAttack();
         }
         else
         {

@@ -6,6 +6,8 @@ public class FallInVoid : MonoBehaviour
 {
     private SpawnManager spawnManager;
     private AudioManager audioManager;
+
+    private ParticleSystem particle;
     void Start()
     {
         spawnManager = FindAnyObjectByType<SpawnManager>();
@@ -22,7 +24,7 @@ public class FallInVoid : MonoBehaviour
         }
         if (collision.gameObject.CompareTag("Enemy"))
         {
-            collision.gameObject.GetComponent<EnemyAi>().isFalling=true;
+            collision.gameObject.GetComponent<EnemyAi>().isFalling = true;
             //muerte enemigo
             StartCoroutine(DeathEnemy(collision.gameObject));
         }
@@ -31,14 +33,18 @@ public class FallInVoid : MonoBehaviour
     public IEnumerator DeathEnemy(GameObject Enemy)
     {
         Debug.Log("El enemigo esta muriendo...");
-
-        //TO DO Activar animacion de muerte
-
-        //TO DO Implementar Sonido de muerte
-        /*if (audioManager != null)
+        particle = Enemy.gameObject.GetComponent<EnemyAi>().particle;
+        //ANIMACION Y PARTICULAS
+        if (!particle.isPlaying)
         {
-            audioManager.DeadPlaySound();
-        }*/
+            particle.Play();
+        }
+        particle.Play();
+        // Sonido de muerte
+        if (audioManager != null)
+        {
+            audioManager.PlayAudioEnemyFall(); ;
+        }
 
         // Esperar a que la animacion termine
         yield return new WaitForSeconds(1f);
@@ -52,14 +58,19 @@ public class FallInVoid : MonoBehaviour
     public IEnumerator DeathPlayer(GameObject player)
     {
         Debug.Log("El player esta muriendo...");
-
-        //TO DO Activar animacion de muerte
-
-        //TO DO Implementar Sonido de muerte
-        /*if (audioManager != null)
+        particle = player.gameObject.GetComponent<PlayerController>().particle;
+        //ANIMACION Y PARTICULAS
+        if (!particle.isPlaying)
         {
-            audioManager.DeadPlaySound();
-        }*/
+            particle.Play();
+        }
+        particle.Play();
+
+        //}Sonido de muerte
+        if (audioManager != null)
+        {
+            audioManager.PlayAudioPlayerFall();
+        }
 
         // Esperar a que la animacion termine
         yield return new WaitForSeconds(1f);

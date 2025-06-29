@@ -2,7 +2,11 @@ using UnityEngine;
 
 public class AudioManager : MonoBehaviour
 {
-    [SerializeField] AudioClip ss;
+    [SerializeField] AudioClip fallEnemy;
+    [SerializeField] AudioClip fallPlayer;
+    [SerializeField] AudioClip windAttackPlayer;
+    [SerializeField] AudioClip windAttackEnemy;
+    [SerializeField] AudioClip crash;
     [SerializeField] private AudioSource player;
     [SerializeField] private AudioSource ambiente;
     [SerializeField] private AudioSource enemy;
@@ -17,32 +21,40 @@ public class AudioManager : MonoBehaviour
         {
             ambiente = GetComponent<AudioSource>();
         }
-        if (enemy==null)
+        if (enemy == null)
         {
             enemy = GetComponent<AudioSource>();
         }
     }
 
     //metodos para reproducir los audios de player
-    public void playAudioPlayer()
-    {   //player es el audio sorce dedicada a sonidos del player
-        player.PlayOneShot(ss);
+    public void PlayAudioPlayerAttack()
+    {   //Player es el audio sorce dedicada a sonidos del Player
+        player.PlayOneShot(windAttackPlayer);
+    }
+    public void PlayAudioPlayerFall()
+    {   //Player es el audio sorce dedicada a sonidos del Player
+        player.PlayOneShot(fallPlayer);
     }
     //TO DO CREAR LOS METODOS PARA REPRODUCIR AUDIO DE PLAYER QUE SE NECESITEN
 
-    //metodos para reproducir los audios de player
-    public void playAudioAmbiente()
+    //metodos Para reProducir los audios del Ambiente
+    public void PlayAudioCrash()
     {
         //ambiente es el audio sorce dedicada a sonidos del ambiente
-        ambiente.PlayOneShot(ss);
+        ambiente.PlayOneShot(crash);
     }
     //TO DO CREAR LOS METODOS PARA REPRODUCIR AUDIO DE AMBIENTE QUE SE NECESITEN
 
-    //metodos para reproducir los audios de player
-    public void playAudioEnemy()
+    //metodos Para reProducir los audios de enemy
+    public void PlayAudioEnemyFall()
     {
         //enemy es el audio sorce dedicada a sonidos del enemy
-        enemy.PlayOneShot(ss);
+        enemy.PlayOneShot(fallEnemy);
+    }
+     public void PlayAudioEnemyAttack()
+    {   //player es el audio sorce dedicada a sonidos del player
+        enemy.PlayOneShot(windAttackEnemy);
     }
     //TO DO CREAR LOS METODOS PARA REPRODUCIR AUDIO DE ENEMIGO QUE SE NECESITEN
 }
