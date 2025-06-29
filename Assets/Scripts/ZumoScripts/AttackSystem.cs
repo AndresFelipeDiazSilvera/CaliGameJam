@@ -5,6 +5,7 @@ public class AttackSystem : MonoBehaviour
     [SerializeField] float windForce = 10f;
     [SerializeField] public Vector2 windDirection = Vector2.right;
     private Vector2 awayFromAttack;
+    public GameObject attacker; // Asigna esto cuando el ataque es instanciado o lanzado
     // metodo para la colicion del ataque
     void OnTriggerEnter2D(Collider2D other)
     {
@@ -12,6 +13,12 @@ public class AttackSystem : MonoBehaviour
         // Verificamos si el objeto que entro en el trigger es un Player o un Enemy
         if (other.CompareTag("Player") || other.CompareTag("Enemy"))
         {
+            // Si el atacante y el objeto colisionado son ambos enemigos, y no son el mismo objeto, no los empujes.
+            if (attacker != null && attacker.CompareTag("Enemy") && other.CompareTag("Enemy") && other.gameObject != attacker)
+            {
+                Debug.Log("Evitando empuje entre enemigos: " + attacker.name + " atacando a " + other.gameObject.name);
+                return; // Salimos del método sin aplicar la fuerza
+            }
             Rigidbody2D targetRigidbody = other.GetComponent<Rigidbody2D>();
             if (targetRigidbody != null)
             {

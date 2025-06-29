@@ -122,6 +122,7 @@ public class EnemyAttack : MonoBehaviour
         AttackSystem windScript = currentWindAttack.GetComponent<AttackSystem>();
         if (windScript != null)
         {
+            windScript.attacker = this.gameObject; 
             windScript.windDirection = windDirection;
             audioManager.PlayAudioEnemyAttack();
         }

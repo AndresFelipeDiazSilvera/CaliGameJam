@@ -3103,6 +3103,14 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 2674392}
+    - target: {fileID: 239806454031310413, guid: 57d643564e4d57f40993a69dc3566674, type: 3}
+      propertyPath: rangeSpawnMax
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 239806454031310413, guid: 57d643564e4d57f40993a69dc3566674, type: 3}
+      propertyPath: rangeSpawnMin
+      value: -30
+      objectReference: {fileID: 0}
     - target: {fileID: 7089981213710684637, guid: 57d643564e4d57f40993a69dc3566674, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
