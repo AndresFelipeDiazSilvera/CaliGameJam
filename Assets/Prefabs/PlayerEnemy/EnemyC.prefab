@@ -110,7 +110,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
-  windForce: 5
+  windForce: 10
   impulseDuration: 0.5
   enemyAttack: {fileID: 4415194510573468456}
   particle: {fileID: 6170902906130085527}
@@ -143,7 +143,7 @@ MonoBehaviour:
     fixedWindDirection: {x: 0, y: 0}
     fixedRotationAngleZ: 0
   attackCooldown: 2
-  attackRange: 9
+  attackRange: 12
   targetPlayer: {fileID: 0}
 --- !u!70 &1772334855347497645
 CapsuleCollider2D:

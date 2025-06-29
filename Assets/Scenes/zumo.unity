@@ -4087,6 +4087,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: AudioManager
       objectReference: {fileID: 0}
+    - target: {fileID: 6372559747073897160, guid: 0ab328e0aefc3794e8ec52c4ef30e68e, type: 3}
+      propertyPath: crash
+      value: 
+      objectReference: {fileID: 8300000, guid: f6c3760e3a87ecb4aa9945cd1eb1d714, type: 3}
+    - target: {fileID: 6372559747073897160, guid: 0ab328e0aefc3794e8ec52c4ef30e68e, type: 3}
+      propertyPath: fallEnemy
+      value: 
+      objectReference: {fileID: 8300000, guid: 1181c0ff45fd6954a960e8f2b3712cc0, type: 3}
+    - target: {fileID: 6372559747073897160, guid: 0ab328e0aefc3794e8ec52c4ef30e68e, type: 3}
+      propertyPath: fallPlayer
+      value: 
+      objectReference: {fileID: 8300000, guid: 290f52ebcba1b794bace7b8b89050f72, type: 3}
+    - target: {fileID: 6372559747073897160, guid: 0ab328e0aefc3794e8ec52c4ef30e68e, type: 3}
+      propertyPath: windAttackEnemy
+      value: 
+      objectReference: {fileID: 8300000, guid: 2d38873b9d379c14c95be286059abb3b, type: 3}
+    - target: {fileID: 6372559747073897160, guid: 0ab328e0aefc3794e8ec52c4ef30e68e, type: 3}
+      propertyPath: windAttackPlayer
+      value: 
+      objectReference: {fileID: 8300000, guid: 8311b6b3e36308342983ce94042b3044, type: 3}
     - target: {fileID: 7943719499475391926, guid: 0ab328e0aefc3794e8ec52c4ef30e68e, type: 3}
       propertyPath: m_LocalPosition.x
       value: 5.04611
@@ -8786,10 +8806,6 @@ PrefabInstance:
     - target: {fileID: 6909278001624889567, guid: 39f6e663379a82044aa54a007a272919, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7346833449959703970, guid: 39f6e663379a82044aa54a007a272919, type: 3}
-      propertyPath: speed
-      value: 15
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
