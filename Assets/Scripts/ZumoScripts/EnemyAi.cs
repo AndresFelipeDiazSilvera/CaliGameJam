@@ -12,7 +12,7 @@ public class EnemyAi : MonoBehaviour
     public bool isFalling = false;
     private float currentImpulseTime = 0f;
     private Rigidbody2D enemyRB2D;
-    private GameObject target;
+    public GameObject target;
     private Animator animator;
 
     void Awake()
@@ -34,12 +34,19 @@ public class EnemyAi : MonoBehaviour
         currentImpulseTime = 0f;
     }
 
-    public void SetTarget(GameObject newTarget)
+    /*public void SetTarget(GameObject newTarget)
     {
         target = newTarget;
         if (enemyAttack != null && enemyAttack.targetPlayer == null)
         {
             enemyAttack.SetTargetPlayer(newTarget.transform);
+        }
+    }*/
+    public void SetTarget()
+    {
+        if (enemyAttack != null && enemyAttack.targetPlayer == null)
+        {
+            enemyAttack.SetTargetPlayer(target.transform);
         }
     }
 

@@ -62,7 +62,7 @@ public class SpawnManager : MonoBehaviour
             if (!Enemy.activeInHierarchy)
             {
                 Enemy.transform.position = SpawnPoint();
-                Enemy.GetComponent<EnemyAi>().SetTarget(player);
+                //Enemy.GetComponent<EnemyAi>().SetTarget(player);
                 Enemy.SetActive(true);
                 return Enemy;
             }
