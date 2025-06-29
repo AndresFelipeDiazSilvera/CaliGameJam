@@ -7,30 +7,31 @@ public class PlayerController : MonoBehaviour
     [SerializeField] float windForce;
     [SerializeField] PlayerInput playerInput;
     [SerializeField] float impulseDuration;
+    [SerializeField] public ParticleSystem particle;
     public Vector2 inputs;
     public bool isBeingImpulsed = false;
     public bool isFalling = false;
     private float currentImpulseTime = 0f;
     private Rigidbody2D rB2D;
-    private Animator animator; 
+    private Animator animator;
 
-    
+
     void Start()
     {
         rB2D = GetComponent<Rigidbody2D>();
-        animator = GetComponent<Animator>(); 
+        animator = GetComponent<Animator>();
     }
 
-   
+
     void Update()
     {
         inputs = playerInput.actions["Move"].ReadValue<Vector2>();
 
-        
+
         animator.SetFloat("horizontal", inputs.x);
         animator.SetFloat("vertical", inputs.y);
         animator.SetFloat("Speed", inputs.sqrMagnitude);
-        
+
 
         if (isBeingImpulsed)
         {

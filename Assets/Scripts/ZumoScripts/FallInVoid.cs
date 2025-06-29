@@ -6,6 +6,8 @@ public class FallInVoid : MonoBehaviour
 {
     private SpawnManager spawnManager;
     private AudioManager audioManager;
+
+    private ParticleSystem particle;
     void Start()
     {
         spawnManager = FindAnyObjectByType<SpawnManager>();
@@ -22,7 +24,7 @@ public class FallInVoid : MonoBehaviour
         }
         if (collision.gameObject.CompareTag("Enemy"))
         {
-            collision.gameObject.GetComponent<EnemyAi>().isFalling=true;
+            collision.gameObject.GetComponent<EnemyAi>().isFalling = true;
             //muerte enemigo
             StartCoroutine(DeathEnemy(collision.gameObject));
         }
@@ -31,9 +33,13 @@ public class FallInVoid : MonoBehaviour
     public IEnumerator DeathEnemy(GameObject Enemy)
     {
         Debug.Log("El enemigo esta muriendo...");
-
-        //TO DO Activar animacion de muerte
-
+        particle = Enemy.gameObject.GetComponent<EnemyAi>().particle;
+        //ANIMACION Y PARTICULAS
+        if (!particle.isPlaying)
+        {
+            particle.Play();
+        }
+        particle.Play();
         //TO DO Implementar Sonido de muerte
         /*if (audioManager != null)
         {
@@ -52,8 +58,13 @@ public class FallInVoid : MonoBehaviour
     public IEnumerator DeathPlayer(GameObject player)
     {
         Debug.Log("El player esta muriendo...");
-
-        //TO DO Activar animacion de muerte
+        particle = player.gameObject.GetComponent<PlayerController>().particle;
+        //ANIMACION Y PARTICULAS
+        if (!particle.isPlaying)
+        {
+            particle.Play();
+        }
+        particle.Play();
 
         //TO DO Implementar Sonido de muerte
         /*if (audioManager != null)

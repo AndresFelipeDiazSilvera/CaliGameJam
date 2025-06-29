@@ -4,7 +4,7 @@ public class Obstacules : MonoBehaviour
 {
     [SerializeField] float forceImpulse;
     [SerializeField] ParticleSystem particle;
-     void OnCollisionEnter2D(Collision2D collision)
+    void OnCollisionEnter2D(Collision2D collision)
     {
         Debug.Log("Obstáculo chocó con: " + collision.gameObject.tag);
 

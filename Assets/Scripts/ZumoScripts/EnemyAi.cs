@@ -6,24 +6,25 @@ public class EnemyAi : MonoBehaviour
     [SerializeField] float windForce;
     [SerializeField] float impulseDuration;
     [SerializeField] private EnemyAttack enemyAttack;
+    [SerializeField] public ParticleSystem particle;
 
     public bool isBeingImpulsed = false;
     public bool isFalling = false;
     private float currentImpulseTime = 0f;
     private Rigidbody2D enemyRB2D;
     private GameObject target;
-    private Animator animator; 
+    private Animator animator;
 
     void Awake()
     {
         enemyRB2D = GetComponent<Rigidbody2D>();
-        animator = GetComponent<Animator>(); 
+        animator = GetComponent<Animator>();
 
         if (enemyAttack == null)
         {
             enemyAttack = GetComponent<EnemyAttack>();
         }
-        
+
     }
 
     void OnEnable()
@@ -53,7 +54,7 @@ public class EnemyAi : MonoBehaviour
                 currentImpulseTime = 0f;
             }
         }
-        
+
         UpdateAnimations();
     }
 
@@ -73,21 +74,21 @@ public class EnemyAi : MonoBehaviour
         }
     }
 
-    
-   private void UpdateAnimations()
-{
-    
-    animator.SetFloat("Speed", enemyRB2D.linearVelocity.sqrMagnitude);
 
-   
-    if (enemyRB2D.linearVelocity.sqrMagnitude > 0.1f) 
+    private void UpdateAnimations()
     {
-       
-        Vector2 moveDirection = enemyRB2D.linearVelocity.normalized;
-        animator.SetFloat("Horizontal", moveDirection.x);
-        animator.SetFloat("Vertical", moveDirection.y);
+
+        animator.SetFloat("Speed", enemyRB2D.linearVelocity.sqrMagnitude);
+
+
+        if (enemyRB2D.linearVelocity.sqrMagnitude > 0.1f)
+        {
+
+            Vector2 moveDirection = enemyRB2D.linearVelocity.normalized;
+            animator.SetFloat("Horizontal", moveDirection.x);
+            animator.SetFloat("Vertical", moveDirection.y);
+        }
     }
-}
 
     public void StartImpulse()
     {
