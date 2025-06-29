@@ -116,6 +116,7 @@ MonoBehaviour:
   particle: {fileID: 6170902906130085527}
   isBeingImpulsed: 0
   isFalling: 0
+  target: {fileID: 6538996155270276720, guid: 39f6e663379a82044aa54a007a272919, type: 3}
 --- !u!114 &4415194510573468456
 MonoBehaviour:
   m_ObjectHideFlags: 0

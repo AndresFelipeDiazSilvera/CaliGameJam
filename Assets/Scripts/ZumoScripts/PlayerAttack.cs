@@ -18,6 +18,7 @@ public class PlayerAttack : MonoBehaviour
 
     //usamos un array de la clase aux para guardar las config de spawn
     public WindSpawnConfig[] windSpawnConfigs;
+    private Animator animator;
 
     private Camera mainCamera;
     private bool canAttack = true;
@@ -26,6 +27,7 @@ public class PlayerAttack : MonoBehaviour
 
     void Start()
     {
+        animator = GetComponent<Animator>();
         mainCamera = Camera.main;
         audioManager = FindAnyObjectByType<AudioManager>();
         if (mainCamera == null)
@@ -116,6 +118,7 @@ public class PlayerAttack : MonoBehaviour
             // Asignar la direccion del viento
             windScript.windDirection = windDirection;
             audioManager.PlayAudioPlayerAttack();
+
         }
         else
         {
@@ -123,12 +126,19 @@ public class PlayerAttack : MonoBehaviour
         }
 
         Destroy(currentWindAttack, 0.5f);
+        animator.SetBool("isAttacking", true);
     }
 
     IEnumerator Cooldown()
     {
         canAttack = false;
         yield return new WaitForSeconds(attackCooldown);
-        canAttack = true; 
+        canAttack = true;
     }
+
+    public void StopAttackAnimation()
+    {
+        animator.SetBool("isAttacking", false);
+    }
+
 }
