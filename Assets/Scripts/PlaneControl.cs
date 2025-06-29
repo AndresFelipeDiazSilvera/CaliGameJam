@@ -8,7 +8,7 @@ public class PlaneControl : MonoBehaviour
     Vector3 dragStartPos;
 
     Rigidbody2D rb;
-    LineRenderer lr;    
+    LineRenderer lr;
     Touch touch;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -17,12 +17,15 @@ public class PlaneControl : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         lr = GetComponent<LineRenderer>();
         lr.positionCount = 0;
+
+        lr.startColor = Color.black;
+        lr.endColor = Color.black;
     }
 
     // Update is called once per frame
     private void Update()
     {
-        // Verificamos la entrada táctil o el mouse             
+        // Verificamos la entrada tï¿½ctil o el mouse             
         HandleTouchInput();
         HandleMouseInput();
     }
@@ -46,17 +49,17 @@ public class PlaneControl : MonoBehaviour
 
     private void HandleMouseInput()
     {
-        if (Input.GetMouseButtonDown(0)) // Si el botón izquierdo del mouse acaba de ser presionado        
+        if (Input.GetMouseButtonDown(0)) // Si el botï¿½n izquierdo del mouse acaba de ser presionado        
             DragStart(Input.mousePosition);
 
-        // No hay un "MousePhase.Moved" explícito, la posición del mouse se actualiza continuamente
-        // Asumimos que si el botón está presionado, estamos "arrastrando"
-        if (Input.GetMouseButton(0))        
+        // No hay un "MousePhase.Moved" explï¿½cito, la posiciï¿½n del mouse se actualiza continuamente
+        // Asumimos que si el botï¿½n estï¿½ presionado, estamos "arrastrando"
+        if (Input.GetMouseButton(0))
             Dragging(Input.mousePosition);
-                
 
-        if (Input.GetMouseButtonUp(0)) // Si el botón izquierdo del mouse acaba de ser soltado        
-            DragRelease(Input.mousePosition);        
+
+        if (Input.GetMouseButtonUp(0)) // Si el botï¿½n izquierdo del mouse acaba de ser soltado        
+            DragRelease(Input.mousePosition);
     }
 
     private void DragStart(Vector3 screenPosition)
@@ -85,7 +88,7 @@ public class PlaneControl : MonoBehaviour
 
         Vector3 force = dragStartPos - dragReleasePos;
         Vector3 clampedForce = Vector3.ClampMagnitude(force, maxDrag) * power;
-        
+
         float angle = Mathf.Atan2(clampedForce.y, clampedForce.x) * Mathf.Rad2Deg;
         rb.rotation = angle - 90;
 
