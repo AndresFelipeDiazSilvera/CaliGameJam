@@ -4,6 +4,11 @@ public class Obstacules : MonoBehaviour
 {
     [SerializeField] float forceImpulse;
     [SerializeField] ParticleSystem particle;
+    private AudioManager audioManager;
+    void Start()
+    {
+        audioManager = FindAnyObjectByType<AudioManager>();
+    }
     void OnCollisionEnter2D(Collision2D collision)
     {
         Debug.Log("Obstáculo chocó con: " + collision.gameObject.tag);
@@ -36,6 +41,7 @@ public class Obstacules : MonoBehaviour
         if (!particle.isPlaying)
         {
             particle.Play();
+            audioManager.PlayAudioCrash();
         }
         particle.Play();
     }

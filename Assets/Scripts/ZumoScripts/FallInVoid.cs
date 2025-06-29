@@ -40,11 +40,11 @@ public class FallInVoid : MonoBehaviour
             particle.Play();
         }
         particle.Play();
-        //TO DO Implementar Sonido de muerte
-        /*if (audioManager != null)
+        // Sonido de muerte
+        if (audioManager != null)
         {
-            audioManager.DeadPlaySound();
-        }*/
+            audioManager.PlayAudioEnemyFall(); ;
+        }
 
         // Esperar a que la animacion termine
         yield return new WaitForSeconds(1f);
@@ -66,11 +66,11 @@ public class FallInVoid : MonoBehaviour
         }
         particle.Play();
 
-        //TO DO Implementar Sonido de muerte
-        /*if (audioManager != null)
+        //}Sonido de muerte
+        if (audioManager != null)
         {
-            audioManager.DeadPlaySound();
-        }*/
+            audioManager.PlayAudioPlayerFall();
+        }
 
         // Esperar a que la animacion termine
         yield return new WaitForSeconds(1f);
