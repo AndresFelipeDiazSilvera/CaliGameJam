@@ -3843,7 +3843,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df18aee43c275684e890f884ed4360c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetSceneName: CelestialMonk3
+  targetSceneName: CelestialMonk4
 --- !u!1 &1908469201
 GameObject:
   m_ObjectHideFlags: 0
